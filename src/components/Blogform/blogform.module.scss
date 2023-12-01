@@ -1,0 +1,19 @@
+@use '../../styles/index.scss' as *;
+.inputwrap{
+  display:flex;
+  flex-wrap:wrap;
+  @extend .mt-1, .mb-1;
+  label{
+    flex:0 0 35%;
+  }
+  input, textarea{
+    flex:0 0 65%;
+  }
+  p{
+    flex:1 0 100%;
+    color:red;
+  }
+}
+.error{
+  border:.1rem solid red;
+}

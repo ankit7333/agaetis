@@ -1,0 +1,47 @@
+@use '../../styles/index.scss' as *;
+.nav{
+  padding-left:.5rem;
+  padding-right:.5rem;
+  @extend .pt-1, .pb-1;
+  background-color:$color-ffffff;
+  @include for-mobile{
+    display:none;
+  }
+  @include for-mobile{
+    &.show{
+      display:block;
+      @include position(absolute, $left:0, $top:6.7rem, $right:0);
+      padding:0;
+      ul{
+        display:flex;
+        flex-direction:column;
+        li{
+          border-bottom:.1rem solid $color-000000;
+        }
+      }
+    }
+  }
+  ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    li{
+      padding:.5rem;
+      text-align:center;
+      width:100%;
+      @include for-ipadPortrait{
+        padding:.5rem .2rem;
+      }
+      a{
+        color:$color-5b5b5c;
+        @include for-ipadPortrait{
+          font-size:1.4rem;
+        }
+        &:hover{
+          color:$color-1276d7;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use '../../styles/index.scss' as *;
+.header{
+  border-bottom:.1rem solid $color-5b5b5c;
+  @extend .p-1;
+  @include for-mobile{
+    padding:1rem 0;
+  }
+  &__inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  &__left{
+    @include for-mobile{
+      display:none;
+    }
+  }
+  &__right{
+    display:flex;
+    align-items:center;
+    button{
+      @extend .p-1;
+    }
+  }
+}
+.logo{
+    font-weight:600;
+    font-size:3rem;
+    color:$color-000000;
+}
+.searchicon{
+    background-image:url(../../public/image/search.png);
+    @extend .mr-1;
+}
+.hamburgericon{
+  background-image:url(../../public/image/menu.png);
+  @extend .ml-1;
+  @include for-ipad{
+    display:none;
+  }
+}

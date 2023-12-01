@@ -1,0 +1,64 @@
+@use '../../styles/index.scss' as *;
+.firepost{
+    display:flex;
+    justify-content:space-between;
+    @extend .mt-3, .mb-3;
+    gap:2rem;
+    flex-direction:column;
+    @include for-desktop{
+        gap:3rem;
+        flex-direction:row;
+    }
+}
+.post{
+    display:flex;
+    @include border-radius(1rem);
+    flex:1 1 100%;
+    border:.1rem solid $color-5b5b5c;
+    overflow:hidden;
+    @include for-mobile{
+        flex-direction:column-reverse;
+    }
+    &__left{
+        display:flex;
+        flex-direction:column;
+        @extend .p-2;
+        flex:1;
+        b{
+            font-size:2rem;
+            color:$color-1276d7;
+            @extend .mb-1;
+            &.green{
+                color:green;
+            }
+        }
+        h6{
+            color:$color-000000;
+            font-size:2.6rem;
+        }
+        p{
+            color:$color-000000;
+            font-size:1.4rem;
+            @extend .mt-1, .mb-1;
+            max-width:40rem;
+        }
+        a{
+            color:$color-1276d7;
+            font-size:1.4rem;
+        }
+    }
+    &__right{
+        background-color:$color-343a40;
+        flex:0 0 40%;
+        @include for-mobile{
+            flex:1 1 200px;
+            width:100%;
+            display:flex;
+        }
+    }
+}
+.date{
+    color:$color-5b5b5c;
+    font-size:1.6rem;
+}
+

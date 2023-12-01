@@ -1,0 +1,41 @@
+@use '../../styles/index.scss' as *;
+.blog{
+  h5{
+    color:$color-000000;
+    border-bottom:.1rem solid $color-5b5b5c;
+    font-style:italic;
+    font-size:2.4rem;
+    @extend .pb-1, .mb-1;
+  }
+  article{
+    @extend .mb-2;
+  }
+  h4{
+    color:$color-000000;
+    font-size:3rem;
+  }
+  .date{
+    color:$color-5b5b5c;
+    font-size:1.8rem;
+    @extend .mb-2;
+    mark{
+      background-color:transparent;
+      color:$color-1276d7;
+    }
+  }
+  p{
+    color:$color-000000;
+    font-size:1.8rem;
+    @extend .mb-2;
+  }
+}
+.button__wrap{
+  @extend .mt-4;
+  display:inline-flex;
+  gap:1rem;
+  :global(button){
+    @include border-radius(3rem);
+    font-size:1.8rem;
+    @extend .pl-1, .pr-1, .pt-0, .pb-0;
+  }
+}

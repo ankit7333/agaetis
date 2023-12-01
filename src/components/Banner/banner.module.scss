@@ -1,0 +1,43 @@
+@use '../../styles/index.scss' as *;
+.banner{
+  display:flex;
+  flex-direction:column;
+  background-color:$color-343a40;
+  @include border-radius(1rem);
+  min-height:250px;
+  @extend .p-2, .mt-2;
+  color:$color-ffffff;
+  justify-content:center;
+  @include for-ipad{
+    min-height:500px;
+    margin-top:0;
+  }  
+  b{
+    font-size:4.5rem;
+    font-style:italic;
+    max-width:50rem;
+    @extend .mb-2;
+    @include for-mobile{
+      font-size:3rem;
+    }
+  }
+  p{
+    font-size:4rem;
+    max-width:85%;
+    width:100%;
+    @extend .mb-2;
+    @include for-mobile{
+      font-size:2rem;
+      max-width:100%;
+    }
+  }
+  a{
+    color:$color-ffffff;
+    font-size:3rem;
+    font-weight:600;
+    @include for-mobile{
+      font-size:2rem;
+    }
+  }
+}
+

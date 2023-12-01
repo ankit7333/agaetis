@@ -1,0 +1,40 @@
+@use 'color' as *;
+@import "mixins";
+
+.modal{
+  width:30rem;
+  @include border-radius(2rem);
+  background-color:$color-ffffff;
+  padding:2rem;
+  @include for-ipad{
+    width:50rem;
+  }
+  &__overlay{
+    width:100%;
+    height:100%;
+    z-index:2;
+    background-color:rgba($color:#000000,$alpha:0.7);
+    overflow-y:auto;
+    @include position(fixed,$top:0,$left:0,$right:0,$bottom:0);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    &.show{
+      display:flex;
+    }
+  }
+  &__header{
+    display:flex;
+    align-items:center;
+    justify-content:end;
+    margin-bottom:1rem;
+  }
+  &__footer{
+    display:flex;
+    justify-content:center;
+    button{
+      width:auto;
+      max-width:10rem;
+    }
+  }
+}
